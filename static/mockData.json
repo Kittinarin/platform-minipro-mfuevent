@@ -1,0 +1,43 @@
+[
+    {
+      "event_id": 1,
+      "event_title": "เตารีด 750 – 2,000 วัตต์ ",
+      "event_school": "100 บาท/วัน",
+      "event_date": "มีสินค้า 5 ชิ้น",
+      "event_img": "/1.png"
+    },
+    {
+      "event_id": 2,
+      "event_title": "เครื่องดูดฝุ่น 750 – 1,200 วัตต์",
+      "event_school": "200 บาท/วัน",
+      "event_date": "มีสินค้า 2 ชิ้น",
+      "event_img": "/2.png"
+    },
+      {
+        "event_id": 1,
+        "event_title": "หม้อหุงข้าว 450 – 1,500 วัตต์",
+        "event_school": "100 บาท/วัน",
+        "event_date": "มีสินค้า 1 ชิ้น",
+        "event_img": "/3.png"
+      },    {
+        "event_id": 1,
+        "event_title": "ตู้เย็น 70 – 145 วัตต์",
+        "event_school": "300 บาท/วัน",
+        "event_date": "มีสินค้า 7 ชิ้น",
+        "event_img": "/4.png"
+      },    {
+        "event_id": 1,
+        "event_title": "ไมโครเวฟ 100 – 1,000 วัตต์",
+        "event_school": "100 บาท/วัน",
+        "event_date": "มีสินค้า 5 ชิ้น",
+        "event_img": "/5.png"
+      },    {
+        "event_id": 1,
+        "event_title": "ไดร์เป่าผม 400 – 1,000 วัตต์",
+        "event_school": "100 บาท/วัน",
+        "event_date": "มีสินค้า 1 ชิ้น",
+        "event_img": "/6.png"
+      }
+
+    ]
+  
