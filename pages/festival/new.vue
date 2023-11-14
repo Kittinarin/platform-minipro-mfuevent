@@ -95,15 +95,13 @@
 
           <v-row justify="center">
             <v-col cols="2">
-              <v-card @click="createNewOne" color="#E8B71A" rounded="pill" class="pa-3" >
-               
-                      <div class="text-center font-weight-bold text-h4">
-                        สร้าง
-                    </div>
-                  
+              <v-card @click="createNewOne" color="#FF914D" rounded="pill" class="pa-3">
+                <div class="text-center font-weight-bold text-h4" style="color: white;">
+                  สร้าง
+                </div>
               </v-card>
             </v-col>
-          </v-row>
+          </v-row>          
         </v-form>
 
         <v-overlay

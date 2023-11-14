@@ -3,9 +3,9 @@
     <v-col class="d-flex justify-center align-start" cols="1">
       <nuxt-link to="/homepage">
         <v-icon
-          style="transform: scaleX(-1); color: brown"
+          style="transform: scaleX(-1); color: #FF914D"
           class="rotate-180"
-          size="120"
+          size="100"
         >
           mdi-share-outline
         </v-icon>

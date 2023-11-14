@@ -6,20 +6,18 @@
         <v-card class="centercard">
           <v-card-text>
             <p class="maintext">
-              Welcome to MFUEVENT
-              You can look around what events
-              and activities are going on around
-              the school
-              If you would like to request your events to be posted
-              please contact (Phone number)
+              ยินดีต้อนรับสู่ EquipmentEase 
+               บริการเช่ายืมของต่าง ๆผ่านทางเว็ปไซด์ของเรามีสินค้าให้ท่านเลือกเช่าได้หลากหลาย
+               และสามารถเช่ารายวันถึงรายเดือนหากท่านสนใจในสินค้า ท่านสามารถซื้อหลังใช้บริการเราได้
+               และช่องทางการติดต่อสอบถามได้ที่เพจเฟสบุ๊คของเรา "EquipmentEase - เช่าของออนไลน์" 
             </p>
           </v-card-text>
           <v-card-actions>
             <v-spacer />
-            <v-btn color="primary" nuxt to="/homepage">
+            <v-btn color="#FF914D" nuxt to="/homepage" style="color: white;">
               Continue
             </v-btn>
-          </v-card-actions>
+          </v-card-actions>          
         </v-card>
       </v-col>
     </v-row>
@@ -39,7 +37,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/background-entry-page.png');
+  background-image: url('/pictrue.png');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -56,14 +54,14 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 135px;
-  border: 5px solid #E8B71A;
+  border: 5px solid #FF914D;
 }
 
 .maintext {
   margin-top: 10%;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: rgb(143, 43, 49);
+  color: rgb(0, 0, 0);
   font-size: 200%;
   line-height: 1.5;
   margin-left: 5%;
