@@ -58,7 +58,7 @@
 
           <!-- แถวที่ 4 -->
           <div>
-            <v-btn color="orange mr-8 white--text" @click="goToNextPage"
+            <v-btn color="#ff914d" class=" mr-8 white--text" @click="goToNextPage"
               >เช่าสินค้า</v-btn
             >
             <v-btn color="orange" outlined @click="goToNextPage"

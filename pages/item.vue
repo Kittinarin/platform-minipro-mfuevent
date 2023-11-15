@@ -37,7 +37,7 @@
                                     - ไม่มีค่าใช้จ่าย
                                 </div>
                                 <div class=" text-center">
-                                    <v-btn color="orange mr-8 white--text" @click="goToNextPage">เช่าสินค้า</v-btn>
+                                    <v-btn color="#ff914d" class=" mr-8 white--text" @click="goToNextPage">เช่าสินค้า</v-btn>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     (ขึ้นอยู่กับระยะทางการจัดส่ง)  
                                 </div>
                                 <div class="text-center">
-                                    <v-btn color="orange mr-8 white--text" @click="goToNextPage">เช่าสินค้า</v-btn>
+                                    <v-btn color="#ff914d" class=" mr-8 white--text" @click="goToNextPage">เช่าสินค้า</v-btn>
                                 </div>
                             </div>
                         </div>
