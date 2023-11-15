@@ -1,76 +1,122 @@
+import { createVuetify} from 'vuetify'
 <template>
-  <div class="background-component">
-    <v-row justify="center" align="center">
-      <v-col cols="12" sm="10" md="8" lg="6">
-        <v-spacer></v-spacer>
-        <v-card class="centercard">
-          <v-card-text>
-            <p class="maintext">
-              ยินดีต้อนรับสู่ EquipmentEase 
-               บริการเช่ายืมของต่าง ๆผ่านทางเว็ปไซด์ของเรามีสินค้าให้ท่านเลือกเช่าได้หลากหลาย
-               และสามารถเช่ารายวันถึงรายเดือนหากท่านสนใจในสินค้า ท่านสามารถซื้อหลังใช้บริการเราได้
-               และช่องทางการติดต่อสอบถามได้ที่เพจเฟสบุ๊คของเรา "EquipmentEase - เช่าของออนไลน์" 
-            </p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn color="#FF914D" nuxt to="/homepage" style="color: white;">
-              Continue
-            </v-btn>
-          </v-card-actions>          
-        </v-card>
-      </v-col>
-    </v-row>
+  <div>
+    <v-container class="search-container" fluid>
+      <v-row justify="center" align="center">
+        <v-col align="center">
+          <v-text-field
+            v-model="search"
+            label="ค้นหา"
+            class="search-text-field"
+            solo
+            hide-details
+            rounded
+            outlined
+          >
+            <template v-slot:append>
+              <v-icon>mdi-magnify</v-icon>
+            </template>
+          </v-text-field>
+        </v-col>
+
+        <v-col xs="12" sm="4" md="4" lg="2">
+          <v-btn rounded @click="handleSort"
+            >Sort <v-icon>mdi-sort</v-icon></v-btn
+          >
+        </v-col>
+
+        <v-col xs="12" sm="12" md="12" lg="12">
+          <v-radio-group v-model="selectedStatus" row>
+            <v-radio
+              v-for="(label, value) in statusOptions"
+              :key="value"
+              :label="label"
+              :value="value"
+              color="black"
+              class="mr-2"
+            ></v-radio>
+          </v-radio-group>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container>
+      <v-row>
+        <v-col
+          v-for="(item, i) in all_event"
+          :key="item.id"
+          cols="4"
+          class="px-10"
+        >
+          <Event :a_event="item" />
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <v-btn
+      v-show="fab"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      color="#FF914D"
+      size="125"
+      @click="toTop"
+    >
+      <v-icon size="50" class="font-weight-bold">mdi-plus</v-icon>
+    </v-btn>
   </div>
 </template>
 
 <script>
+import mockData from "@/static/mockData.json";
+
 export default {
-  name: 'IndexPage'
-}
+  name: "homepage",
+  data() {
+    return {
+      fab: true, // Ensure 'fab' is defined in your data
+
+      all_event: mockData,
+      search: "",
+      selectedStatus: null,
+      statusOptions: {
+        OnEvents: "อุปกรณ์ไฟฟ้าภายในบ้าน",
+        UpEvents: "เครื่องแต่งกาย",
+        ExpEvents: "อื่น ๆ",
+      },
+    };
+  },
+  methods: {
+    handleSort() {
+      // Add your sorting logic here
+    },
+  
+    toTop() {
+      this.$router.push( 'festival/new' );
+    },
+  },
+};
 </script>
 
-<style scoped>
-.background-component {
-  background-position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/pictrue.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
+<style>
+.search-container {
+  background-color: #FF914D;
+  border-radius: 50px;
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 35px 10px 0px;
 }
 
-/* Style the v-card as needed */
-.centercard {
-  margin: 15% 2vw;
-  margin-bottom: 20%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 135px;
-  border: 5px solid #FF914D;
+.search-text-field {
+  font-size: 18px; /* Adjust the font size as needed */
+  width: 90%;
+}
+.v-input--radio-group__input {
+  justify-content: space-evenly;
 }
 
-.maintext {
-  margin-top: 10%;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-size: 200%;
-  line-height: 1.5;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-
-
+/* Additional styling as needed */
 </style>
-
-
-

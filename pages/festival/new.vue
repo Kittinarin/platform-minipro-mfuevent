@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center">
     <v-col class="d-flex justify-center align-start" cols="1">
-      <nuxt-link to="/homepage">
+      <nuxt-link to="/">
         <v-icon
           style="transform: scaleX(-1); color: #FF914D"
           class="rotate-180"
