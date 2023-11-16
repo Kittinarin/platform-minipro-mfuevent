@@ -2,7 +2,7 @@
     <v-card
       color="grey-lighten-4"
       flat
-      height="200px"
+      height="100px"
       rounded="0"
     >
       <v-toolbar density="compact">
@@ -13,8 +13,8 @@
         <v-spacer></v-spacer>
   
         <v-btn icon>
-          <v-icon>mdi-login</v-icon>
-        </v-btn>
+    <v-icon size="36" color="">mdi-login</v-icon>
+  </v-btn>
   
       </v-toolbar>
     </v-card>
