@@ -8714,6 +8714,11 @@ vue-router@^3.6.5:
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-3.6.5.tgz"
   integrity sha512-VYXZQLtjuvKxxcshuRAwjHnciqZVoXAjTjcqBTz4rKc8qih9g9pI3hbDjmqXaHdgL3v8pV6P8Z335XvHzESxLQ==
 
+vue-select@^3.20.2:
+  version "3.20.2"
+  resolved "https://registry.npmjs.org/vue-select/-/vue-select-3.20.2.tgz"
+  integrity sha512-ZSzIDzyYsWZULGUxVp1h6u3yi9IZQBWX8r6kSudUI/I5J1HQKpBjRntvkrg6pr87xmm16kdChvHCDN+W84vTKw==
+
 vue-server-renderer@^2.7.10, vue-server-renderer@^2.7.15:
   version "2.7.15"
   resolved "https://registry.npmjs.org/vue-server-renderer/-/vue-server-renderer-2.7.15.tgz"
@@ -8749,7 +8754,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@*, vue@^2.0.0, vue@^2.6.10, vue@^2.6.4, vue@^2.7.10, vue@^2.7.2:
+vue@*, vue@^2.0.0, vue@^2.6.10, vue@^2.6.4, vue@^2.7.10, vue@^2.7.2, vue@2.x:
   version "2.7.15"
   resolved "https://registry.npmjs.org/vue/-/vue-2.7.15.tgz"
   integrity sha512-a29fsXd2G0KMRqIFTpRgpSbWaNBK3lpCTOLuGLEDnlHWdjB8fwl6zyYZ8xCrqkJdatwZb4mGHiEfJjnw0Q6AwQ==
@@ -8777,7 +8782,7 @@ vuetify-loader@^1.7.3:
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
 
-"vuetify@^1.3.0 || ^2.0.0", vuetify@^2.1.3, vuetify@^2.6, vuetify@^2.6.10:
+"vuetify@^1.3.0 || ^2.0.0", vuetify@^2.1.3, vuetify@^2.6, vuetify@^2.7.1:
   version "2.7.1"
   resolved "https://registry.npmjs.org/vuetify/-/vuetify-2.7.1.tgz"
   integrity sha512-DVFmRsDtYrITw9yuGLwpFWngFYzEgk0KwloDCIV3+vhZw+NBFJOSzdbttbYmOwtqvQlhDxUyIRQolrRbSFAKlg==
