@@ -1,6 +1,7 @@
 import { createVuetify} from 'vuetify'
 <template>
   <div>
+    <topbar />
     <v-container class="search-container" fluid>
       <v-row justify="center" align="center">
         <v-col align="center">
@@ -43,7 +44,7 @@ import { createVuetify} from 'vuetify'
     <v-container>
       <v-row>
         <v-col
-          v-for="(item, i) in all_event"
+          v-for="(item) in all_event"
           :key="item.id"
           cols="4"
           class="px-10"
@@ -70,6 +71,7 @@ import { createVuetify} from 'vuetify'
 </template>
 
 <script>
+import topbar from "@/components/topbar.vue";
 import mockData from "@/static/mockData.json";
 
 export default {
