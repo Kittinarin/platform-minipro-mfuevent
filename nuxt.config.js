@@ -1,6 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  generate: {
+    routes: function () {
+      const products = 'http://localhost:8080/api/products';
+      return products.map(product => `/product/${product._id}`);
+    },
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 

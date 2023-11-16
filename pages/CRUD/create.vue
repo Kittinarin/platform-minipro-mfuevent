@@ -1,18 +1,37 @@
 <template>
   <div class="create-product">
     <h1>Create Product</h1>
-    <form @submit.prevent="createProduct">
+    <form @submit.prevent="createProduct" class="form-container">
       <label for="name">Product Name:</label>
-      <input type="text" v-model="productName" required>
+      <input type="text" v-model="productName" required class="input-field">
 
       <label for="price">Product Price:</label>
-      <input type="number" v-model="productPrice" required>
+      <input type="number" v-model="productPrice" required class="input-field">
 
-      <button type="submit">Create Product</button>
+      <!-- Add input fields for the new properties -->
+      <label for="amount">Amount:</label>
+      <input type="number" v-model="productAmount" required class="input-field">
+
+      <label for="details">Details:</label>
+      <textarea v-model="productDetails" required class="input-field"></textarea>
+
+      <label for="startDate">Start Date:</label>
+      <input type="date" v-model="productStartDate" required class="input-field">
+
+      <label for="endDate">End Date:</label>
+      <input type="date" v-model="productEndDate" required class="input-field">
+
+      <label for="address">Address:</label>
+      <input type="text" v-model="productAddress" required class="input-field">
+
+      <label for="image">Image URL:</label>
+      <input type="text" v-model="productImage" required class="input-field">
+
+      <button type="submit" class="submit-button">Create Product</button>
     </form>
 
-    <!-- เพิ่ม v-alert เพื่อแจ้งเตือน -->
-    <v-alert v-if="createSuccess" type="success">Product created successfully!</v-alert>
+    <!-- Add v-alert for notifications -->
+    <v-alert v-if="createSuccess" type="success" class="success-alert">Product created successfully!</v-alert>
   </div>
 </template>
 
@@ -22,7 +41,13 @@ export default {
     return {
       productName: '',
       productPrice: 0,
-      createSuccess: false // เพิ่มตัวแปรสำหรับตรวจสอบการสร้างสินค้าสำเร็จ
+      productAmount: 0,
+      productDetails: '',
+      productStartDate: '',
+      productEndDate: '',
+      productAddress: '',
+      productImage: '',
+      createSuccess: false,
     };
   },
   methods: {
@@ -32,20 +57,33 @@ export default {
         await this.$axios.post('http://localhost:8080/api/products', {
           name: this.productName,
           price: this.productPrice,
+          amount: this.productAmount,
+          details: this.productDetails,
+          startDate: this.productStartDate,
+          endDate: this.productEndDate,
+          address: this.productAddress,
+          image: this.productImage,
         });
 
         console.log('Product created successfully!');
-        this.createSuccess = true; // ตั้งค่าให้ createSuccess เป็น true
-        this.resetForm(); // ตั้งค่าค่าในฟอร์มเป็นค่าเริ่มต้นหลังจากสร้างสินค้าสำเร็จ
+        this.createSuccess = true;
+        this.resetForm();
       } catch (error) {
         console.error('Error creating product:', error);
       }
     },
     resetForm() {
-      // รีเซ็ตค่าในฟอร์ม
+      // Reset form values
       this.productName = '';
       this.productPrice = 0;
-      // รีเซ็ต createSuccess เป็น false หลังจาก 2 วินาที
+      this.productAmount = 0;
+      this.productDetails = '';
+      this.productStartDate = '';
+      this.productEndDate = '';
+      this.productAddress = '';
+      this.productImage = '';
+
+      // Reset createSuccess after 2 seconds
       setTimeout(() => {
         this.createSuccess = false;
       }, 2000);
@@ -56,36 +94,50 @@ export default {
 
 <style scoped>
 .create-product {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   color: #333;
+  text-align: center;
 }
 
-label {
-  display: block;
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
-input {
+.input-field {
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
   box-sizing: border-box;
 }
 
-button {
+textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.submit-button {
   background-color: #4caf50;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.success-alert {
+  margin-top: 16px;
 }
 </style>
