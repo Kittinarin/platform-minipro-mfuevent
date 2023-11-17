@@ -26,6 +26,18 @@
       <nuxt-link to="/CRUD/createCustomer">
         <v-btn color="primary" class="crud-button">Create Customer</v-btn>
       </nuxt-link>
+
+      <nuxt-link to="/CRUD/readCustomer">
+        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+      </nuxt-link>
+
+      <nuxt-link to="/CRUD/updateCustomer">
+        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+      </nuxt-link>
+
+      <nuxt-link to="/CRUD/deleteCustomer">
+        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+      </nuxt-link>
     </div>
   </template>
   
