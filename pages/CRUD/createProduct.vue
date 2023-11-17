@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import { VAlert } from 'vuetify/lib';
 export default {
   data() {
     return {
@@ -88,6 +90,9 @@ export default {
         this.createSuccess = false;
       }, 2000);
     },
+  },
+  components: {
+    VAlert,
   },
 };
 </script>

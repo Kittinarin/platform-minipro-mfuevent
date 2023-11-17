@@ -58,7 +58,7 @@
     </v-card-actions>
 
     <v-card-actions class="justify-center">
-      <v-btn depressed color="primary"> Rent merchandise </v-btn>
+      <v-btn depressed color="primary"> Borrow </v-btn>
       <v-btn depressed color="error"> Buy </v-btn>
     </v-card-actions>
   </v-card>

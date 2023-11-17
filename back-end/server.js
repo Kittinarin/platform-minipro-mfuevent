@@ -114,5 +114,3 @@ app.get('/api/products/:id', async (req, res) => {
 app.listen(port, () => {
     console.log('The server runs on port 8080.');
 });
-
-
