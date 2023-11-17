@@ -41,7 +41,6 @@
       try {
         const allCustomersResponse = await $axios.get(`http://localhost:8080/api/customers`);
         const allCustomers = allCustomersResponse.data;
-  
         const customerIds = allCustomers.map((customer) => String(customer._id));
   
         return {

@@ -10,11 +10,11 @@
 
       <v-spacer></v-spacer>
 
-      <!-- <v-toolbar-items>
-        <v-btn>Login</v-btn>
+      <v-toolbar-items>
+        <v-btn to="/CRUD/crud">manage</v-btn>
 
-        <v-btn>Register</v-btn>
-      </v-toolbar-items> -->
+        <!-- <v-btn>Register</v-btn> -->
+      </v-toolbar-items>
 
       <v-btn icon>
         <v-icon>mdi-login</v-icon>
