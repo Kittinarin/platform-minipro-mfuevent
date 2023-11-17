@@ -37,31 +37,42 @@
       </v-btn>
     </v-card-actions>
 
+    <v-card-actions>
+      <v-row class="d-flex align-center justify-center">
+        <v-text-field
+          v-model.number="foo"
+          label=""
+          append-outer-icon="mdi-plus"
+          @click:append-outer="increment"
+          prepend-icon="mdi-minus"
+          @click:prepend="decrement"
+          class="text-field-custom"
+        ></v-text-field>
+
+        <v-card-text class="text-center">
+          <div v-if="productDetails">
+            <p>{{ "Amount stock :  " + productDetails.amount }}</p>
+          </div>
+        </v-card-text>
+      </v-row>
+    </v-card-actions>
+
     <v-card-actions class="justify-center">
-        <v-btn
-      depressed
-      color="primary"
-    >
-    Rent merchandise
-    </v-btn>
-    <v-btn
-      depressed
-      color="error"
-    >
-    Buy
-    </v-btn>
-      
+      <v-btn depressed color="primary"> Rent merchandise </v-btn>
+      <v-btn depressed color="error"> Buy </v-btn>
     </v-card-actions>
   </v-card>
 </template>
   
-  <script>
+<script>
 import axios from "axios";
 
 export default {
   data() {
     return {
+      foo: 0,
       selectedDuration: null,
+      productDetails: null,
     };
   },
   methods: {
@@ -70,6 +81,16 @@ export default {
         this.selectedDuration = null;
       } else {
         this.selectedDuration = duration;
+      }
+    },
+    increment() {
+      if (this.foo < this.productDetails.amount) {
+        this.foo++;
+      }
+    },
+    decrement() {
+      if (this.foo > 0) {
+        this.foo--;
       }
     },
   },
@@ -89,11 +110,17 @@ export default {
   },
 };
 </script>
+
   
   <style scoped>
 .product-info {
   margin-bottom: 10px;
   font-size: 14px;
+}
+.text-field-custom {
+  max-width: 100px;
+  margin-left: 10px; /* ปรับระยะห่างไอคอนทางซ้าย */
+  margin-right: 10px; /* ปรับระยะห่างไอคอนทางขวา */
 }
 </style>
   

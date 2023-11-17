@@ -112,7 +112,7 @@ app.get('/api/products/:id', async (req, res) => {
 
 // 8. เริ่ม Express.js server
 app.listen(port, () => {
-    console.log('เซิร์ฟเวอร์ทำงานที่พอร์ต 8080');
+    console.log('The server runs on port 8080.');
 });
 
 

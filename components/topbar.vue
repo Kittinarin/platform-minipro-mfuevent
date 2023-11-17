@@ -4,11 +4,17 @@
     <v-toolbar density="compact">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title >
+      <v-toolbar-title>
         <router-link to="/" class="custom-link">EquipmentEase</router-link>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
+
+      <!-- <v-toolbar-items>
+        <v-btn>Login</v-btn>
+
+        <v-btn>Register</v-btn>
+      </v-toolbar-items> -->
 
       <v-btn icon>
         <v-icon>mdi-login</v-icon>
