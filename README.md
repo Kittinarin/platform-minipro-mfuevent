@@ -1,4 +1,7 @@
-# mfu-event-platform
+HOWTO SETUP
+CD bace-end
+npm install express 
+node server.js
 
 ## Build Setup
 

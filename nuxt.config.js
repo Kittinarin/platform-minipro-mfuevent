@@ -35,7 +35,7 @@ export default {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: 'http://localhost:3000/api',
+    baseURL: 'http://localhost:8080/api',
   },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

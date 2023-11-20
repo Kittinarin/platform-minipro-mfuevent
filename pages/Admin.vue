@@ -9,7 +9,7 @@
   
       <!-- ปุ่มที่ 2 ไปที่ /CRUD/read -->
       <nuxt-link to="/CRUD/readProduct">
-        <v-btn color="primary" class="crud-button">Read Product</v-btn>
+        <v-btn color="primary" class="crud-button">show Product</v-btn>
       </nuxt-link>
   
       <!-- ปุ่มที่ 3 ไปที่ /CRUD/update -->
@@ -28,15 +28,15 @@
       </nuxt-link>
 
       <nuxt-link to="/CRUD/readCustomer">
-        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+        <v-btn color="primary" class="crud-button">show Customer</v-btn>
       </nuxt-link>
 
       <nuxt-link to="/CRUD/updateCustomer">
-        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+        <v-btn color="primary" class="crud-button">update Customer</v-btn>
       </nuxt-link>
 
       <nuxt-link to="/CRUD/deleteCustomer">
-        <v-btn color="primary" class="crud-button">Create Customer</v-btn>
+        <v-btn color="primary" class="crud-button">delete Customer</v-btn>
       </nuxt-link>
     </div>
   </template>

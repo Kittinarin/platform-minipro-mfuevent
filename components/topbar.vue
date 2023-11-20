@@ -24,8 +24,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      search: "", // เพิ่มตัวแปร search เข้ามาใน data
+    };
+  },
+  // ... โค้ดอื่น ๆ
+};
 </script>
+
 
 <style scoped>
 .custom-link {
