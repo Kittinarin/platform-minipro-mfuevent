@@ -89,7 +89,7 @@ export default {
     async createBill() {
       try {
         const response = await this.$axios.post(
-          "http://localhost:8080/api/createBillWithDates",
+          "/api/createBillWithDates",
           {
             start_date: this.startDate,
             end_date: this.endDate,

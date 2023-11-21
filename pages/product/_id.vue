@@ -118,7 +118,7 @@ export default {
     try {
       const productId = params.id;
       const response = await axios.get(
-        `http://localhost:8080/api/products/${productId.toString()}`
+        `/api/products/${productId.toString()}`
       );
       const productDetails = response.data;
       return { productDetails };

@@ -38,7 +38,7 @@ export default {
   methods: {
     async createCustomer() {
       try {
-        await this.$axios.post('http://localhost:8080/api/customers', {
+        await this.$axios.post('/api/customers', {
           name: this.customerName,
           address: this.customerAddress,
           email: this.customerEmail,

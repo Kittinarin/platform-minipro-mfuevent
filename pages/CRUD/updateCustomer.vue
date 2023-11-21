@@ -39,7 +39,7 @@
     },
     async asyncData({ $axios }) {
       try {
-        const allCustomersResponse = await $axios.get(`http://localhost:8080/api/customers`);
+        const allCustomersResponse = await $axios.get(`/api/customers`);
         const allCustomers = allCustomersResponse.data;
         const customerIds = allCustomers.map((customer) => String(customer._id));
   
@@ -54,7 +54,7 @@
     methods: {
       async updateCustomer() {
         try {
-          await this.$axios.put(`http://localhost:8080/api/customers/${this.customerId}`, {
+          await this.$axios.put(`/api/customers/${this.customerId}`, {
             name: this.customerName,
             address: this.customerAddress,
           });

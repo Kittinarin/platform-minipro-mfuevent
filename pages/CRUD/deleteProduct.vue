@@ -30,7 +30,7 @@
     methods: {
       async fetchProducts() {
         try {
-          const response = await this.$axios.get("http://localhost:8080/api/products");
+          const response = await this.$axios.get("/api/products");
           this.products = response.data;
         } catch (error) {
           console.error("Error fetching products:", error);
@@ -38,7 +38,7 @@
       },
       async deleteProduct() {
         try {
-          const response = await this.$axios.delete(`http://localhost:8080/api/products/${this.selectedProductId}`);
+          const response = await this.$axios.delete(`/api/products/${this.selectedProductId}`);
           console.log("Product deleted:", response.data);
           this.deleteSuccess = true;
           this.fetchProducts();

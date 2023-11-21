@@ -39,7 +39,7 @@ export default {
     const billId = "your_bill_id"; // แทนที่ด้วย ID ของบิลที่คุณต้องการ
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/getBills/${billId}`
+        `/api/getBills/${billId}`
       );
       this.bill = response.data;
     } catch (error) {

@@ -51,7 +51,7 @@ export default {
       try {
         // Make a GET request to fetch products
         const response = await this.$axios.get(
-          "http://localhost:8080/api/products"
+          "/api/products"
         );
         this.products = response.data;
         this.show = true;

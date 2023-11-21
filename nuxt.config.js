@@ -1,12 +1,6 @@
 import colors from 'vuetify/es5/util/colors';
 
 export default {
-  generate: {
-    routes: function () {
-      const products = 'http://localhost:8080/api/products';
-      return products.map(product => `/product/${product._id}`);
-    },
-  },
   ssr: false,
   head: {
     title: 'Equipment Ease',
@@ -35,7 +29,7 @@ export default {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: 'http://localhost:8080/api',
+    baseURL: 'http://localhost:8080',
   },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

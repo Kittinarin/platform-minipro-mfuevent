@@ -39,7 +39,7 @@
     async asyncData({ $axios }) {
       try {
         // ทำ HTTP GET request เพื่อดึงข้อมูลทั้งหมดของสินค้า
-        const allProductsResponse = await $axios.get(`http://localhost:8080/api/products`);
+        const allProductsResponse = await $axios.get(`/api/products`);
         const allProducts = allProductsResponse.data;
   
         // แปลง ObjectID ให้เป็น String
@@ -57,7 +57,7 @@
       async updateProduct() {
         try {
           // ทำ HTTP PUT request เพื่อแก้ไขข้อมูลสินค้า
-          await this.$axios.put(`http://localhost:8080/api/products/${this.productId}`, {
+          await this.$axios.put(`/api/products/${this.productId}`, {
             name: this.productName,
             price: this.productPrice,
           });
