@@ -32,7 +32,7 @@
     methods: {
       async fetchCustomers() {
         try {
-          const response = await this.$axios.get("http://localhost:8080/api/customers");
+          const response = await this.$axios.get("https://peach-bat-tutu.cyclic.app/customers");
           this.customers = response.data;
         } catch (error) {
           console.error("Error fetching customers:", error);
@@ -40,7 +40,7 @@
       },
       async deleteCustomer() {
         try {
-          const response = await this.$axios.delete(`http://localhost:8080/api/customers/${this.selectedCustomerId}`);
+          const response = await this.$axios.delete(`https://peach-bat-tutu.cyclic.app/customers/${this.selectedCustomerId}`);
           console.log("Customer deleted:", response.data);
           this.deleteSuccess = true;
           this.fetchCustomers();

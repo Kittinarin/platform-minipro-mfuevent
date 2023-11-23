@@ -56,7 +56,7 @@ export default {
     async createProduct() {
       try {
         // HTTP POST request to create data
-        await this.$axios.post('http://localhost:8080/api/products', {
+        await this.$axios.post('https://peach-bat-tutu.cyclic.app/products', {
           name: this.productName,
           price: this.productPrice,
           amount: this.productAmount,

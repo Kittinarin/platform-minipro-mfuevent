@@ -17,7 +17,7 @@
   export default {
     async asyncData({ $axios }) {
       // ทำ HTTP GET request เพื่อดึงข้อมูลจาก API
-      const response = await $axios.get('http://localhost:8080/api/products');
+      const response = await $axios.get('https://peach-bat-tutu.cyclic.app/products');
       const products = response.data;
       return { products };
     }

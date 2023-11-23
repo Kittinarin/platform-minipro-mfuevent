@@ -31,37 +31,49 @@
 
 
 <script>
+// นำเข้าคอมโพเนนต์ Vue
 import topbar from "@/components/topbar.vue";
 import search from "@/components/search.vue";
+
 export default {
+  // คุณสมบัติข้อมูล
   data() {
     return {
-      show: false,
-      products: [],
+      show: false, // ตัวแปรสำหรับควบคุมการแสดงผลของสินค้า
+      products: [], // อาร์เรย์เพื่อเก็บข้อมูลสินค้าที่ดึงมา
     };
   },
+  // ไลฟ์ไซค์ฮุค: mounted
   mounted() {
+    // เรียกเมธอด fetchProducts เมื่อคอมโพเนนต์ถูกโหลด
     this.fetchProducts();
   },
+  // เมธอด
   methods: {
+    // เมธอดสำหรับนำทางไปยังหน้ารายละเอียดสินค้า
     goToDetailPage(productId) {
       this.$router.push(`/product/${productId}`);
     },
+    // เมธอดแบบ asynchronous สำหรับดึงข้อมูลสินค้า
     async fetchProducts() {
       try {
-        // Make a GET request to fetch products
+        // ทำ GET request เพื่อดึงข้อมูลสินค้าจาก URL ที่ระบุ
         const response = await this.$axios.get(
-          "http://localhost:8080/api/products"
+          "https://peach-bat-tutu.cyclic.app/products"
         );
+        // อัปเดตอาร์เรย์ 'products' ด้วยข้อมูลจาก response
         this.products = response.data;
+        // ตั้งค่า 'show' เป็น true เพื่อบ่งบอกว่าสินค้าพร้อมแสดงผล
         this.show = true;
       } catch (error) {
+        // ล็อกข้อความข้อผิดพลาดถ้ามีข้อผิดพลาดในการดึงข้อมูลสินค้า
         console.error("Error fetching products:", error);
       }
     },
   },
 };
 </script>
+
 
 <style>
 .card-container {

@@ -11,7 +11,7 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn to="/CRUD/crud">manage</v-btn>
+        <v-btn to="/Admin">manage</v-btn>
 
         <!-- <v-btn>Register</v-btn> -->
       </v-toolbar-items>
