@@ -40,13 +40,13 @@
         <div class="mx-10">
           <!-- แถวที่ 2 -->
           <div class="my-10">
-            <v-btn color="orange" outlined class="mr-3" @click="selectOption(1)"
+            <v-btn color="orange" outlined class="mr-3" 
               >1 วัน</v-btn
             >
-            <v-btn color="orange" outlined class="mx-3" @click="selectOption(2)"
+            <v-btn color="orange" outlined class="mx-3" 
               >7 วัน</v-btn
             >
-            <v-btn color="orange" outlined class="mx-3" @click="selectOption(3)"
+            <v-btn color="orange" outlined class="mx-3"
               >30 วัน</v-btn
             >
           </div>
@@ -61,7 +61,7 @@
             <v-btn color="#ff914d" class=" mr-8 white--text" @click="goToNextPage"
               >เช่าสินค้า</v-btn
             >
-            <v-btn color="orange" outlined @click="goToNextPage"
+            <v-btn color="orange" outlined @click="selectOption"
               >ซื้อสินค้า</v-btn
             >
           </div>
@@ -82,12 +82,13 @@
 export default {
   methods: {
     selectOption(option) {
-      // ทำสิ่งที่ต้องการเมื่อเลือกตัวเลือก
+      this.$router.push({ name: 'slip2', query: { day: '4', option: 'rent' } });
     },
     goToNextPage() {
       this.$router.push({ name: 'item', query: { day: '1', option: 'rent' } });
       // นำทางไปหน้าต่อไป
     },
   },
+  
 };
 </script>
