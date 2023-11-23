@@ -1,9 +1,11 @@
 import colors from 'vuetify/es5/util/colors';
+const axios = require('axios');
 
 export default {
   generate: {
-    routes: function () {
-      const products = 'http://localhost:8080/api/products';
+    routes: async function () {
+      const response = await axios.get('http://localhost:8080/api/products');
+      const products = response.data;
       return products.map(product => `/product/${product._id}`);
     },
   },
